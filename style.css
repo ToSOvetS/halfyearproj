@@ -21,26 +21,15 @@
 }
 
 .card:hover {
-    transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(255, 107, 129, 0.2);
-    border-color: #ffb8c6;
 }
 
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #ff6b81, #ff9a8b, #ffd3b6);
-}
 
 .card_img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    background: linear-gradient(45deg, #fff0f3, #ffe8e8);
+    background: #fff0f3;
 }
 
 .card_name {
@@ -49,7 +38,6 @@
     margin: 18px 18px 10px;
     color: #5d4037;
     line-height: 1.4;
-    font-family: 'Georgia', serif;
 }
 
 .card_price {
@@ -85,12 +73,7 @@
 
 .card_to_cart:hover {
     background: #ff5252;
-    transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(255, 107, 129, 0.4);
-}
-
-.card_to_cart:active {
-    transform: translateY(0);
 }
 
 .card_info {
@@ -111,7 +94,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 2px;
     background: linear-gradient(90deg, #ff6b81, #ff9a8b);
     transition: width 0.3s ease;
