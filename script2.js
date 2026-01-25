@@ -18,7 +18,7 @@ for (let i = 0; i < flows.length; i++){
         price: flows[i].price,
         image: `photos/${flows[i].image}`
     });
-    let ind = "i" + String(i)
+    let ind = "i" + String(i);
     ind.addEventListener("click", () => {
         sessionStorage.setItem("id_sait", i);
         window.open("https://tosovets.github.io/halfyearproj/desc.html");
