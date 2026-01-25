@@ -13,13 +13,14 @@ for (let i = 0; i < flows.length; i++){
     `
     let template = Handlebars.compile(templatecode);
     cards.innerHTML += template({
-        id: String(i),
+        id: "i" + String(i),
         name: flows[i].name,
         price: flows[i].price,
         image: `photos/${flows[i].image}`
     });
-    String(i).addEventListener("click", () => {
+    let ind = "i" + String(i)
+    ind.addEventListener("click", () => {
         sessionStorage.setItem("id_sait", i);
-        open("https://tosovets.github.io/halfyearproj/desc.html");
+        window.open("https://tosovets.github.io/halfyearproj/desc.html");
     })
 }
