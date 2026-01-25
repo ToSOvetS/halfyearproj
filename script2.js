@@ -22,9 +22,8 @@ for (let i = 0; i < flows.length; i++){
 }
 
 document.querySelectorAll(".card_info").forEach(function(button) {
-    let cou = 0;
     button.addEventListener("click", function() {
-        sessionStorage.setItem("id_sait", cou);
+        sessionStorage.setItem("id_sait", Number(button.parentElement.id.substring(1)));
         window.open("https://tosovets.github.io/halfyearproj/desc.html");
     });
     cou++;
