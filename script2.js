@@ -26,5 +26,4 @@ document.querySelectorAll(".card_info").forEach(function(button) {
         sessionStorage.setItem("id_sait", Number(button.parentElement.id.substring(1)));
         window.open("https://tosovets.github.io/halfyearproj/desc.html");
     });
-    cou++;
 })
