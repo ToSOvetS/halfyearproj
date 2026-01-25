@@ -18,6 +18,9 @@ for (let i = 0; i < flows.length; i++){
         price: flows[i].price,
         image: `photos/${flows[i].image}`
     });
+    
+}
+for (let i = 0; i < flows.length; i++){
     let ind = document.getElementById("i" + String(i));
     ind.addEventListener("click", () => {
         sessionStorage.setItem("id_sait", i);

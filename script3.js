@@ -19,5 +19,5 @@ main.innerHTML += template({
     name: flows[ind].name,
     price: flows[ind].price,
     image: `photos/${flows[ind].image}`,
-    desc: flows[ind].description
+    des: flows[ind].description
 });
