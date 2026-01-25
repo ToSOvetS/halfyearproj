@@ -1,23 +1,24 @@
-async function loadBouquets() {
-    try {
-        // Запрашиваем JSON файл
-        const response = await fetch('data.json');
-        
-        // Проверяем успешность запроса
-        if (!response.ok) {
-            throw new Error(`Ошибка HTTP: ${response.status}`);
-        }
-        
-        // Парсим JSON данные
-        const bouquets = await response.json();
-        
-        // Возвращаем данные или обрабатываем их
-        return bouquets;
-        
-    } catch (error) {
-        console.error('Не удалось загрузить данные о букетах:', error);
-        return []; // Возвращаем пустой массив в случае ошибки
-    }
+let flows = [];
+let xhr = new XMLHttpRequest();
+
+// Связываем объект с методом и адресом.
+xhr.open('GET', 'https://tosovets.github.io/halfyearproj/data.json', false);
+
+try {
+  // Отправляем запрос.
+  xhr.send();
+  
+  // Проверяем статус ответа.
+  if (xhr.status === 200) {
+    // Преобразуем ответ из JSON в объект.
+    let data = JSON.parse(xhr.responseText);
+    
+    // Получаем данные по ключу «login».
+    flows = data;
+    console.log("Логин пользователя: " + userLogin);
+  } else {
+    console.log("Ошибка! Статус: " + xhr.status);
+  }
+} catch (error) {
+  console.log("Произошла сетевая ошибка, данные не получены.");
 }
-let flows = loadBouquets();
-console.log(flows);
