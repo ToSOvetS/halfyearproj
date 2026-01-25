@@ -20,10 +20,11 @@ for (let i = 0; i < flows.length; i++){
     });
     
 }
-for (let i = 0; i < flows.length; i++){
-    let ind = document.getElementById("i" + String(i));
-    ind.addEventListener("click", () => {
-        sessionStorage.setItem("id_sait", i);
+let cou = 0;
+document.querySelectorAll(".card_info").forEach(function(button) {
+    button.addEventListener("click", function() {
+        sessionStorage.setItem("id_sait", cou);
         window.open("https://tosovets.github.io/halfyearproj/desc.html");
     });
-}
+    cou++;
+})
