@@ -6,6 +6,9 @@ main {
     min-height: 100vh;
     font-family: 'Segoe UI', sans-serif;
 }
+.logo{
+    text-decoration: none;
+}
 .main_inf {
     display: flex;
     gap: 40px;
