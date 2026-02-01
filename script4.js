@@ -22,7 +22,6 @@ btn.addEventListener("click", () => {
                 for (let i = 0; i < datas.length; i++){
                     if (un == datas[i]["login"]){
                         inde = i;
-                        document.querySelector(".error").innerText = "Логин уже существует!";
                         fu = true;
                         break;
                     }
@@ -32,7 +31,7 @@ btn.addEventListener("click", () => {
                         document.querySelector(".error").innerText = "Введен неверный павроль!"
                     } else{
                         localStorage.setItem("isLogged", true);
-                        localStorage.setItem("alls", JSON.stringify(data1));
+                        localStorage.setItem("alls", JSON.stringify(datas[inde]));
                         window.open("https://tosovets.github.io/halfyearproj/index.html");
                     }
                 }
