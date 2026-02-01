@@ -35,6 +35,7 @@ btn.addEventListener("click", () => {
                     data1.login = un;
                     data1.pass = ps;
                     data1.name = fn;
+                    data1.cart = [];
                     let flows = [];
                     let xhr = new XMLHttpRequest();
                     xhr.open('GET', 'https://tosovets.github.io/halfyearproj/data.json', false);
