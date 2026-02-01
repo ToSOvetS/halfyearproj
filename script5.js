@@ -13,9 +13,9 @@ btn.addEventListener("click", () => {
     } else{
         let asddd = [];
         let data1_ = {};
-        data1_.login = un;
-        data1_.pass = ps;
-        data1_.name = fn;
+        data1_.login = "";
+        data1_.pass = "";
+        data1_.name = "";
         data1_.cart = [];
         let flows = [];
         let xhr = new XMLHttpRequest();
