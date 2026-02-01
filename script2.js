@@ -31,5 +31,6 @@ document.querySelectorAll(".card_info").forEach(function(button) {
 document.querySelectorAll(".card_to_cart").forEach(function(button) {
     button.addEventListener("click", function() {
         carts.push(flows[button.parentElement.parentElement.id.substring(1)])
+        console.log(carts);
     });
 })
