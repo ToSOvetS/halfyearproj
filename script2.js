@@ -32,7 +32,7 @@ document.querySelectorAll(".card_to_cart").forEach(function(button) {
     button.addEventListener("click", function() {
         carts.push(flows[button.parentElement.parentElement.id.substring(1)])
         console.log(carts);
-        etch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76')
+        fetch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76')
             .then(function(response) {
                 if (response.ok) {
                 return response.json();
