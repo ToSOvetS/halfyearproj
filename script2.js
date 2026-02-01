@@ -32,7 +32,7 @@ document.querySelectorAll(".card_to_cart").forEach(function(button) {
     button.addEventListener("click", function() {
         carts.push(flows[button.parentElement.parentElement.id.substring(1)])
         console.log(carts);
-        etch('https://corsproxy.io/?key=c637c1f5&url=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76')
+        etch('https://yacdn.org/proxy/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76')
             .then(function(response) {
                 if (response.ok) {
                 return response.json();
