@@ -31,3 +31,4 @@ fetch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0b
     .catch(function(error) {
         console.log("Ошибка соединения!");
 });
+localStorage.clear();
