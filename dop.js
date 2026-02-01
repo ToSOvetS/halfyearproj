@@ -1,0 +1,1 @@
+fetch('http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', { method: 'DELETE'});

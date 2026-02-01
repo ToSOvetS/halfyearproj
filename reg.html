@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | Магазин букетов "Цветочная феерия"</title>
+    <link rel="stylesheet" href="reg_log.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="left-content">
+                <h1>Добро пожаловать в SStore!</h1>
+                <p>Зарегистрируйтесь, пожалуйста, для оформления заказов!</p>
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <div class="form-header">
+                <h2>Заполните форму для регистрации</h2>
+            </div>
+            
+            <div id="registrationForm">
+                <div class="form-group">
+                    <label for="fullName">Ваше имя</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Введите ваше имя">
+                </div>
+                
+                <div class="form-group">
+                    <label for="username">Логин</label>
+                    <input type="text" id="username" name="username" placeholder="Придумайте логин">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" placeholder="Создайте пароль">
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Подтверждение пароля</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль">
+                </div>
+                
+                <button id="btn" class="submit-btn">
+                    Зарегистрироваться
+                </button>
+                <p class="error"></p>
+                <div class="login-link">
+                    <a href="log.html">Уже есть аккаунт?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script5.js"></script>
+</body>
+</html> 
