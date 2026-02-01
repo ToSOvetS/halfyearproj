@@ -1,3 +1,4 @@
-if (localStorage.getItem("isLogged") == null){
-    window.open("https://tosovets.github.io/halfyearproj/reg.html")
+let a = localStorage.getItem("isLogged");
+if (!a){
+    window.location.href = '/reg.html';
 }
