@@ -32,5 +32,47 @@ document.querySelectorAll(".card_to_cart").forEach(function(button) {
     button.addEventListener("click", function() {
         carts.push(flows[button.parentElement.parentElement.id.substring(1)])
         console.log(carts);
+        etch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76')
+            .then(function(response) {
+                if (response.ok) {
+                return response.json();
+                } else {
+                console.log("Ошибка! Код: " + response.status);
+                }
+            })
+            .then(function(data) {
+                let fu = true;
+                let datas = data.inf;
+                for (let i = 0; i < datas.length; i++){
+                    if (localStorage.getItem("alls")["login"] == datas[i]["login"]){
+                        datas[i]["cart"] = carts;
+                        let ano = {};
+                        ano.inf = datas;
+                        let dataJSON123 = JSON.stringify(ano);
+                        fetch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', { method: 'DELETE'});
+                        fetch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: dataJSON123
+                            })
+                            .then(function(response) {
+                                if (response.status === 201) {
+                                console.log("Данные успешно отправлены!");
+                                return response.json();
+                                } else {
+                                console.log("Ошибка! Код: " + response.status);
+                                }
+                            })
+                            .then(function(data) {
+                                console.log(data);
+                            })
+                            .catch(function(error) {
+                                console.log("Ошибка соединения!");
+                        });
+                    }
+                }
+            });
     });
 })
