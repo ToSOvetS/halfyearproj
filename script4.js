@@ -28,7 +28,7 @@ btn.addEventListener("click", () => {
                     }
                 }
                 if (fu){
-                    if (datas[i]["pass"] != ps){
+                    if (datas[inde]["pass"] != ps){
                         document.querySelector(".error").innerText = "Введен неверный павроль!"
                     } else{
                         localStorage.setItem("isLogged", true);
