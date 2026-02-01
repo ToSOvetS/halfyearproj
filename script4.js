@@ -4,7 +4,7 @@ btn.addEventListener("click", () => {
     un = document.getElementById("username").value;
     ps = document.getElementById("password").value;
     console.log(cps);
-    if (! (fn && un && ps && cps)){
+    if (! (un && ps)){
         document.querySelector(".error").innerText = "Вы не заполнили все поля!";
     } else{
         fetch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76')
