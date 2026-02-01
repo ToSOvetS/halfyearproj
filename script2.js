@@ -49,8 +49,8 @@ document.querySelectorAll(".card_to_cart").forEach(function(button) {
                         let ano = {};
                         ano.inf = datas;
                         let dataJSON123 = JSON.stringify(ano);
-                        fetch('https://corsproxy.io/?key=c637c1f5&url=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', { method: 'DELETE'});
-                        fetch('https://corsproxy.io/?key=c637c1f5&url=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', {
+                        fetch('https://yacdn.org/proxy/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', { method: 'DELETE'});
+                        fetch('https://yacdn.org/proxy/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
