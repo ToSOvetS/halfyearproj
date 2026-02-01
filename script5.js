@@ -11,6 +11,52 @@ btn.addEventListener("click", () => {
     } else if (ps !== cps){
         document.querySelector(".error").innerText = "Пароли не совпадают!";
     } else{
+        let asddd = [];
+        let data1_ = {};
+        data1_.login = un;
+        data1_.pass = ps;
+        data1_.name = fn;
+        data1_.cart = [];
+        let flows = [];
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://tosovets.github.io/halfyearproj/data.json', false);
+        try {
+        xhr.send();
+        if (xhr.status === 200) {
+            let data2_a = JSON.parse(xhr.responseText);
+            flows = data2_a;
+        } else {
+            console.log("Ошибка! Статус: " + xhr.status);
+        }
+        } catch (error) {
+            console.log("Произошла сетевая ошибка, данные не получены.");
+        }
+        data1_.flowrs = flows;
+        asddd.push(data1_);
+        let data2_ = {};
+        data2_.inf = asddd;
+        let dataJSO1N = JSON.stringify(data2_);
+        fetch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: dataJSO1N
+            })
+            .then(function(response) {
+                if (response.status === 201) {
+                console.log("Данные успешно отправлены!");
+                return response.json();
+                } else {
+                console.log("Ошибка! Код: " + response.status);
+                }
+            })
+            .then(function(data) {
+                console.log(data);
+            })
+            .catch(function(error) {
+                console.log("Ошибка соединения!");
+        });
         fetch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76')
             .then(function(response) {
                 if (response.ok) {
