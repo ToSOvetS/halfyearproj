@@ -77,7 +77,7 @@ btn.addEventListener("click", () => {
                             console.log("Ошибка соединения!");
                     });
                     localStorage.setItem("isLogged", true);
-                    localStorage.setItem("alls", data1);
+                    localStorage.setItem("alls", JSON.stringify(data1));
                     window.open("https://tosovets.github.io/halfyearproj/index.html");
                 }
             })
