@@ -6,7 +6,7 @@ btn.addEventListener("click", () => {
     if (! (un && ps)){
         document.querySelector(".error").innerText = "Вы не заполнили все поля!";
     } else{
-        fetch('https://api.codetabs.com/v1/proxy?quest=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76')
+        fetch('https://api.allorigins.win/raw?url=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76')
             .then(function(response) {
                 if (response.ok) {
                 return response.json();

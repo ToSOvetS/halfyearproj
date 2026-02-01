@@ -1,4 +1,4 @@
-fetch('https://api.codetabs.com/v1/proxy?quest=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', { method: 'DELETE'});
+fetch('https://api.allorigins.win/raw?url=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', { method: 'DELETE'});
 let data1_dop = {};
 data1_dop.login = "";
 data1_dop.pass = "";
@@ -10,7 +10,7 @@ datas_dop.push(data1_dop);
 let data2_dop = {};
 data2_dop.inf = datas_dop;
 let dataJSON_dop = JSON.stringify(data2_dop);
-fetch('https://api.codetabs.com/v1/proxy?quest=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', {
+fetch('https://api.allorigins.win/raw?url=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'

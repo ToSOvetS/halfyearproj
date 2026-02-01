@@ -32,7 +32,7 @@ document.querySelectorAll(".card_to_cart").forEach(function(button) {
     button.addEventListener("click", function() {
         carts.push(flows[button.parentElement.parentElement.id.substring(1)])
         console.log(carts);
-        etch('https://api.codetabs.com/v1/proxy?quest=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76')
+        etch('https://api.allorigins.win/raw?url=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76')
             .then(function(response) {
                 if (response.ok) {
                 return response.json();
@@ -49,8 +49,8 @@ document.querySelectorAll(".card_to_cart").forEach(function(button) {
                         let ano = {};
                         ano.inf = datas;
                         let dataJSON123 = JSON.stringify(ano);
-                        fetch('https://api.codetabs.com/v1/proxy?quest=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', { method: 'DELETE'});
-                        fetch('https://api.codetabs.com/v1/proxy?quest=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', {
+                        fetch('https://api.allorigins.win/raw?url=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', { method: 'DELETE'});
+                        fetch('https://api.allorigins.win/raw?url=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
