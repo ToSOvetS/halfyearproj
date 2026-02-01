@@ -3,7 +3,6 @@ btn.addEventListener("click", () => {
     document.querySelector(".error").innerText = "";
     un = document.getElementById("username").value;
     ps = document.getElementById("password").value;
-    console.log(cps);
     if (! (un && ps)){
         document.querySelector(".error").innerText = "Вы не заполнили все поля!";
     } else{
