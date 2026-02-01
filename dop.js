@@ -1,4 +1,4 @@
-fetch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', { method: 'DELETE'});
+fetch('https://corsproxy.io/?http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', { method: 'DELETE'});
 let data1_dop = {};
 data1_dop.login = "";
 data1_dop.pass = "";
@@ -10,7 +10,7 @@ datas_dop.push(data1_dop);
 let data2_dop = {};
 data2_dop.inf = datas_dop;
 let dataJSON_dop = JSON.stringify(data2_dop);
-fetch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', {
+fetch('https://corsproxy.io/?http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
