@@ -11,7 +11,7 @@ btn.addEventListener("click", () => {
     } else if (ps !== cps){
         document.querySelector(".error").innerText = "Пароли не совпадают!";
     } else{
-        fetch('https://api.allorigins.win/raw?url=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76')
+        fetch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76')
             .then(function(response) {
                 if (response.ok) {
                 return response.json();
@@ -55,8 +55,8 @@ btn.addEventListener("click", () => {
                     let data2 = {};
                     data2.inf = datas;
                     let dataJSON = JSON.stringify(data2);
-                    fetch('https://api.allorigins.win/raw?url=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', { method: 'DELETE'});
-                    fetch('https://api.allorigins.win/raw?url=http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', {
+                    fetch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', { method: 'DELETE'});
+                    fetch('https://cors-anywhere.herokuapp.com/http://web4.informatics.ru:82/api/a0badc6d515368d213e8edad8fc39c76', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
