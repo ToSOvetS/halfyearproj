@@ -27,3 +27,9 @@ document.querySelectorAll(".card_info").forEach(function(button) {
         window.open("https://tosovets.github.io/halfyearproj/desc.html");
     });
 })
+
+document.querySelectorAll(".card_to_cart").forEach(function(button) {
+    button.addEventListener("click", function() {
+        carts.push(flows[button.parentElement.parentElement.id.substring(1)])
+    });
+})
